@@ -1,8 +1,10 @@
 @import "./variables/variables";
 @import "./librairies/mixins";
+@import "./librairies/keyframes";
 @import "./librairies/fontStuff"; //import des polices
 @import "./librairies/reset";
 @import "./layout/header";
 @import "./layout/menu-grille"; //comportement des vignettes des menus de la page d'accueil
+@import "./composants/btn"; //comportement du CTA "Prochainement"
 @import "./layout/footer";
 @import "./pages/menu";

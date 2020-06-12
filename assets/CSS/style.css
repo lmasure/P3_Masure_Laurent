@@ -1,12 +1,53 @@
-@charset "UTF-8";
-/**
- * Gradient de couleur sur le TEXTE
- * $direction : direction du gradient (par défaut : de haut vers le bas)
- * $color1 : 1ere couleur du gradient
- * $color2 : 2eme couleur du gradient
- */
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@300;900&display=swap");
 @import url(//db.onlinewebfonts.com/c/913440ba1b89bec89e21e3b93c0d0e34?family=Queens+Park);
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes point {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: 'Komika';
   src: url(/fonts/Komika.ttf);
@@ -86,9 +127,6 @@ main {
   margin: 0 10px 50px 10px;
   box-shadow: 0 0 10px #bbba;
   text-align: center;
-  transition: opacity 400ms ease-in-out;
-  overflow: hidden;
-  z-index: 1;
 }
 
 @media screen and (min-width: 700px) {
@@ -130,10 +168,17 @@ main {
 
 .menu-grille__bloc--note {
   background: #fbdfdb;
+  color: #3c1319;
+}
+
+.menu-grille__bloc--note img {
+  width: 5rem;
+  margin-bottom: -25px;
 }
 
 .menu-grille__bloc--note h2 {
   font-family: "Devonshire", cursive;
+  margin-top: -70px;
 }
 
 .menu-grille__bloc--note p {
@@ -148,36 +193,39 @@ main {
 }
 
 .menu-grille__bloc--chic h2 {
-  font-family: 'Croissant One', cursive;
+  font-family: "Croissant One", cursive;
   font-size: 1.4em;
-  background-image: linear-gradient(0.25turn, #C67412, #A56799);
+  background-size: 100%;
   -webkit-background-clip: text;
-  background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  background-image: linear-gradient(0.25turn, #C67412, #A56799);
 }
 
 .menu-grille__bloc--chic p {
-  font-family: 'DM Serif Text', serif;
+  font-family: "Queens Park", serif;
+  font-weight: bold;
 }
 
 .menu-grille__bloc--delice {
-  background: #edefef;
+  background: #fbfbfb;
 }
 
 .menu-grille__bloc--delice h2 {
   font-family: "Dancing Script", cursive;
   font-size: 2.2em;
-  background-image: linear-gradient(0.25turn, #C67412, #A56799);
+  background-size: 100%;
   -webkit-background-clip: text;
-  background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  background-image: linear-gradient(160deg, #2602df, #3896f8);
 }
 
 .menu-grille__bloc--delice p {
-  font-family: 'Nanum Pen Script', cursive;
-  font-style: italic;
+  font-family: "Komika", cursive;
+  color: #3896f8;
 }
 
 .menu-grille__bloc--palette {
@@ -187,16 +235,67 @@ main {
 .menu-grille__bloc--palette h2 {
   font-family: "Kaushan Script", cursive;
   font-size: 2.2em;
-  background-image: linear-gradient(0.25turn, #3d943a, #bdff80);
+  background-size: 100%;
   -webkit-background-clip: text;
-  background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  background-image: linear-gradient(0.25turn, #3d943a, #bdff80);
 }
 
 .menu-grille__bloc--palette p {
   font-family: 'Nanum Pen Script', cursive;
   font-style: italic;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover .dot {
+  animation: point 1.7s ease-in-out infinite;
+  opacity: 1;
+}
+
+.btn:hover .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.btn:hover .dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.btn__txt {
+  padding: 0.7em 2.2em;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 0.5em;
+  color: #facf49;
+  background: #599d87;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  .btn__txt {
+    font-size: 1.6rem;
+  }
+}
+
+.btn__txt .dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #facf49;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 700px) {
+  .btn__txt .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .footer {
@@ -233,7 +332,17 @@ main {
 }
 
 .footer__txt a:hover {
-  animation: shake 500ms infinite;
+  animation: shake 80ms ease-in-out;
+  animation-iteration-count: 20;
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-3deg);
+  }
 }
 
 .menu {
@@ -259,7 +368,7 @@ main {
   font-weight: 400;
 }
 
-.menu__bloc .course {
+.menu__bloc .plats {
   position: relative;
   margin: 75px 0 15px 0;
   text-align: center;
@@ -270,26 +379,26 @@ main {
   align-items: center;
 }
 
-.menu__bloc .course:first-of-type {
+.menu__bloc .plats:first-of-type {
   margin-top: 50px;
 }
 
-.menu__bloc .course__separator {
+.menu__bloc .plats__separator {
   display: inline-block;
   width: 30%;
   height: 1em;
 }
 
-.menu__bloc .course__separator--after {
+.menu__bloc .plats__separator--after {
   transform: scaleX(-1);
 }
 
-.menu__bloc .course h4 {
+.menu__bloc .plats .souligne {
   margin: 0;
   position: relative;
 }
 
-.menu__bloc .course h4::after {
+.menu__bloc .plats .souligne::after {
   content: "";
   position: absolute;
   bottom: -0.3em;
@@ -303,14 +412,14 @@ main {
   transition: opacity 400ms, transform 600ms;
 }
 
-.menu__bloc .course:hover > h4::after {
+.menu__bloc .plats:hover > .souligne::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
 .menu__bloc table {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .menu__bloc td {
@@ -326,12 +435,12 @@ main {
 .menu__bloc--note {
   background: #fbdfdb;
   color: #3c1319;
-  font-family: 'Itim', cursive;
+  font-family: "Komika", cursive;
   font-style: italic;
 }
 
 .menu__bloc--note h3 {
-  font-family: 'Devonshire', cursive;
+  font-family: "Devonshire", cursive;
   font-style: normal;
 }
 
@@ -339,14 +448,14 @@ main {
   width: 7rem;
 }
 
-.menu__bloc--note .course__separator {
+.menu__bloc--note .plats__separator {
   background: center/contain no-repeat url(/assets/images/menu1-bar.svg);
 }
 
 .menu__bloc--note .title-bottom {
   margin-top: 50px;
   text-align: center;
-  font-family: 'Devonshire', cursive;
+  font-family: "Devonshire", cursive;
   font-style: normal;
   font-size: 2.5rem;
 }
@@ -357,15 +466,21 @@ main {
 
 .menu__bloc--chic {
   background: #fff5fe;
-  font-family: "Croissant One", cursive;
+  font-family: "Queens Park", serif;
 }
 
 .menu__bloc--chic h3 {
-  font-family: "Queens Park", serif, cursive;
-  font-size: 2.2rem;
+  font-family: "Croissant One", cursive;
+  font-size: 2rem;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(160deg, #C67412, #A56799);
 }
 
-.menu__bloc--chic .course {
+.menu__bloc--chic .plats {
   font-size: 1.3rem;
   font-weight: 700;
 }
@@ -374,16 +489,40 @@ main {
   font-size: 1.1rem;
 }
 
-.menu__bloc--chic .course__separator--1 {
-  background: center/contain no-repeat url(../img/sep-chic-1.svg);
+.menu__bloc--chic .plats__separator--1 {
+  background: center/contain no-repeat url(/assets/images/menu2-bar-1.svg);
 }
 
-.menu__bloc--chic .course__separator--2 {
-  background: center/contain no-repeat url(../img/sep-chic-2.svg);
+.menu__bloc--chic .plats:nth-of-type(1) h4 {
+  color: #C67412;
 }
 
-.menu__bloc--chic .course__separator--3 {
-  background: center/contain no-repeat url(../img/sep-chic-3.svg);
+.menu__bloc--chic table:nth-of-type(1) {
+  color: #C67412;
+}
+
+.menu__bloc--chic .plats__separator--2 {
+  background: center/contain no-repeat url(/assets/images/menu2-bar-2.svg);
+}
+
+.menu__bloc--chic .plats:nth-of-type(2) h4 {
+  color: #A56799;
+}
+
+.menu__bloc--chic table:nth-of-type(2) {
+  color: #A56799;
+}
+
+.menu__bloc--chic .plats__separator--3 {
+  background: center/contain no-repeat url(/assets/images/menu2-bar-3.svg);
+}
+
+.menu__bloc--chic .plats:nth-of-type(3) h4 {
+  color: #6E4CCC;
+}
+
+.menu__bloc--chic table:nth-of-type(3) {
+  color: #6E4CCC;
 }
 
 .menu__bloc--delice {
@@ -400,11 +539,11 @@ main {
   font-size: 4rem;
 }
 
-.menu__bloc--delice .course {
+.menu__bloc--delice .plats {
   font-size: 1.7rem;
 }
 
-.menu__bloc--delice .course__separator--after {
+.menu__bloc--delice .plats__separator--after {
   transform: scaleX(-1);
 }
 
@@ -416,15 +555,15 @@ main {
   padding-top: 0.3em;
 }
 
-.menu__bloc--delice .course__separator--1 {
+.menu__bloc--delice .plats__separator--1 {
   background: center/contain no-repeat url(../img/sep-delice-1.svg);
 }
 
-.menu__bloc--delice .course__separator--2 {
+.menu__bloc--delice .plats__separator--2 {
   background: center/contain no-repeat url(../img/sep-delice-2.svg);
 }
 
-.menu__bloc--delice .course__separator--3 {
+.menu__bloc--delice .plats__separator--3 {
   background: center/contain no-repeat url(../img/sep-delice-3.svg);
 }
 
@@ -440,11 +579,11 @@ main {
   font-style: normal;
 }
 
-.menu__bloc--palette .course__separator {
+.menu__bloc--palette .plats__separator {
   background: center/contain no-repeat url(../img/sep-palette.svg);
 }
 
-.menu__bloc--palette .course h4 {
+.menu__bloc--palette .plats h4 {
   font-size: 1.3rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,30 +1,39 @@
 .footer {
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0.4rem 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-    @include headerStyle;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.4rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  @include headerStyle;
 
-    &__txt {
-        text-align: center;
-        @include desktop-only {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            font-size: 1.4rem;
-        }
-
-        a {
-            display: block;
-            padding: 0.3em 1.2em;
-            &:hover {
-                animation: shake 500ms infinite;
-            }
-        }
+  &__txt {
+    text-align: center;
+    @include desktop-only {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      font-size: 1.4rem;
     }
+
+    a {
+      display: block;
+      padding: 0.3em 1.2em;
+      &:hover {
+        animation: shake 80ms ease-in-out;
+        animation-iteration-count: 20;
+        @keyframes shake {
+          from {
+            transform: rotate(3deg);
+          }
+          to {
+            transform: rotate(-3deg);
+          }
+        }
+      }
+    }
+  }
 }

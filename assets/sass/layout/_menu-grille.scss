@@ -34,9 +34,9 @@
         }
 
         // Animation : opacité pour toute la carte, et scale uniquement pour la div "zoom" dans la carte
-        transition: opacity 400ms ease-in-out;
-        overflow: hidden; // pour ne pas dépasser de la carte lors du scale
-        z-index: 1; // pour rester SOUS les header et footer...
+        // transition: opacity 400ms ease-in-out;
+        // overflow: hidden; // pour ne pas dépasser de la carte lors du scale
+        // z-index: 1; // pour rester SOUS les header et footer...
         .zoom {
             transition: transform 400ms ease-in-out;
         }
@@ -50,8 +50,14 @@
         // Menu de "La note enchantée"
         &--note {
             background: $menu-bg1;
+            color: $txt-color-menu1;
+            img{
+                width: 5rem;
+                margin-bottom: -25px;
+            }
             h2 {
                 font-family: $txt-menu1-title;
+                margin-top: -70px;
             }
             p {
                 font-family: $txt-menu1-menu;
@@ -65,27 +71,28 @@
             background: $menu-bg2;
             color: $txt-color-menu2;
             h2 {
-                font-family: 'Croissant One', cursive;
+                font-family: $txt-menu2-title;
                 font-size: 1.4em;
-                @include textGradient(0.25turn, $grad-color-menu2-start, $grad-color-menu2-end);
+                @include grad-menu(0.25turn, $grad-color-menu2-start, $grad-color-menu2-end);
             }
             p {
-                font-family: 'DM Serif Text', serif;
+                font-family: $txt-menu2-menu;
+                font-weight: bold;
             }
         }
 
         // Menu de "Le délice des papilles"
         &--delice {
-            background: $menu-bg3;
+            background: lighten($color:$menu-bg3, $amount: 5);
             
             h2 {
                 font-family: $txt-menu3-title;
                 font-size: 2.2em;
-                @include textGradient(0.25turn, $grad-color-menu2-start, $grad-color-menu2-end);
+                @include grad-menu(160deg, $grad-color-menu3-start, $grad-color-menu3-end);
             }
             p {
-                font-family: 'Nanum Pen Script', cursive;
-                font-style: italic;
+                font-family: $txt-menu1-menu;
+                color: $grad-color-menu3-end;
             }
         }
 
@@ -96,7 +103,7 @@
             h2 {
                 font-family: $txt-menu4-title;
                 font-size: 2.2em;
-                @include textGradient(0.25turn, $grad-color-menu4-start, $grad-color-menu4-end);
+                @include grad-menu(0.25turn, $grad-color-menu4-start, $grad-color-menu4-end);
             }
             p {
                 font-family: 'Nanum Pen Script', cursive;
