@@ -1,0 +1,450 @@
+@charset "UTF-8";
+/**
+ * Gradient de couleur sur le TEXTE
+ * $direction : direction du gradient (par défaut : de haut vers le bas)
+ * $color1 : 1ere couleur du gradient
+ * $color2 : 2eme couleur du gradient
+ */
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kaushan+Script&family=Montserrat:wght@300;900&display=swap");
+@import url(//db.onlinewebfonts.com/c/913440ba1b89bec89e21e3b93c0d0e34?family=Queens+Park);
+@font-face {
+  font-family: 'Komika';
+  src: url(/fonts/Komika.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+main {
+  display: block;
+  margin: 5rem 3% 8rem 3%;
+  min-width: 500px;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    margin: 8rem 3% 8rem 3%;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #facf49;
+  background: #599d87;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header__title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.5em;
+  font-weight: 700;
+  letter-spacing: -0.1em;
+}
+
+@media screen and (min-width: 700px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+
+.menu-grille {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-grille__bloc {
+  width: 350px;
+  height: 510px;
+  margin: 0 10px 50px 10px;
+  box-shadow: 0 0 10px #bbba;
+  text-align: center;
+  transition: opacity 400ms ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .menu-grille__bloc {
+    margin: 0 20px 50px 20px;
+  }
+}
+
+.menu-grille__bloc a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu-grille__bloc h2 {
+  font-size: 1.9rem;
+  line-height: 1.9em;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.menu-grille__bloc p {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.menu-grille__bloc .zoom {
+  transition: transform 400ms ease-in-out;
+}
+
+.menu-grille__bloc:hover .zoom {
+  transform: scale(1.15);
+}
+
+.menu-grille__bloc:hover {
+  opacity: 0.5;
+}
+
+.menu-grille__bloc--note {
+  background: #fbdfdb;
+}
+
+.menu-grille__bloc--note h2 {
+  font-family: "Devonshire", cursive;
+}
+
+.menu-grille__bloc--note p {
+  font-family: "Komika", cursive;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.menu-grille__bloc--chic {
+  background: #fff5fe;
+  color: #C67412;
+}
+
+.menu-grille__bloc--chic h2 {
+  font-family: 'Croissant One', cursive;
+  font-size: 1.4em;
+  background-image: linear-gradient(0.25turn, #C67412, #A56799);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.menu-grille__bloc--chic p {
+  font-family: 'DM Serif Text', serif;
+}
+
+.menu-grille__bloc--delice {
+  background: #edefef;
+}
+
+.menu-grille__bloc--delice h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2em;
+  background-image: linear-gradient(0.25turn, #C67412, #A56799);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.menu-grille__bloc--delice p {
+  font-family: 'Nanum Pen Script', cursive;
+  font-style: italic;
+}
+
+.menu-grille__bloc--palette {
+  background: #fdfffd;
+}
+
+.menu-grille__bloc--palette h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.2em;
+  background-image: linear-gradient(0.25turn, #3d943a, #bdff80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.menu-grille__bloc--palette p {
+  font-family: 'Nanum Pen Script', cursive;
+  font-style: italic;
+}
+
+.footer {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.4rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #facf49;
+  background: #599d87;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer__txt {
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__txt {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1.4rem;
+  }
+}
+
+.footer__txt a {
+  display: block;
+  padding: 0.3em 1.2em;
+}
+
+.footer__txt a:hover {
+  animation: shake 500ms infinite;
+}
+
+.menu {
+  max-width: 800px;
+  margin: auto;
+}
+
+.menu__bloc {
+  box-shadow: 0 0 10px #bbba;
+  padding: 30px 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__bloc {
+    padding: 60px 80px;
+  }
+}
+
+.menu__bloc h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+}
+
+.menu__bloc .course {
+  position: relative;
+  margin: 75px 0 15px 0;
+  text-align: center;
+  font-size: 1.7rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__bloc .course:first-of-type {
+  margin-top: 50px;
+}
+
+.menu__bloc .course__separator {
+  display: inline-block;
+  width: 30%;
+  height: 1em;
+}
+
+.menu__bloc .course__separator--after {
+  transform: scaleX(-1);
+}
+
+.menu__bloc .course h4 {
+  margin: 0;
+  position: relative;
+}
+
+.menu__bloc .course h4::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3em;
+  right: -0.5em;
+  left: -0.5em;
+  height: 2px;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 400ms, transform 600ms;
+}
+
+.menu__bloc .course:hover > h4::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.menu__bloc table {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.menu__bloc td {
+  padding-top: 1em;
+}
+
+.menu__bloc td:nth-child(2) {
+  text-align: right;
+  padding-left: 20px;
+  font-size: 1.1em;
+}
+
+.menu__bloc--note {
+  background: #fbdfdb;
+  color: #3c1319;
+  font-family: 'Itim', cursive;
+  font-style: italic;
+}
+
+.menu__bloc--note h3 {
+  font-family: 'Devonshire', cursive;
+  font-style: normal;
+}
+
+.menu__bloc--note h3 img {
+  width: 7rem;
+}
+
+.menu__bloc--note .course__separator {
+  background: center/contain no-repeat url(/assets/images/menu1-bar.svg);
+}
+
+.menu__bloc--note .title-bottom {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Devonshire', cursive;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+.menu__bloc--note .title-bottom img {
+  width: 2.5rem;
+}
+
+.menu__bloc--chic {
+  background: #fff5fe;
+  font-family: "Croissant One", cursive;
+}
+
+.menu__bloc--chic h3 {
+  font-family: "Queens Park", serif, cursive;
+  font-size: 2.2rem;
+}
+
+.menu__bloc--chic .course {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.menu__bloc--chic table {
+  font-size: 1.1rem;
+}
+
+.menu__bloc--chic .course__separator--1 {
+  background: center/contain no-repeat url(../img/sep-chic-1.svg);
+}
+
+.menu__bloc--chic .course__separator--2 {
+  background: center/contain no-repeat url(../img/sep-chic-2.svg);
+}
+
+.menu__bloc--chic .course__separator--3 {
+  background: center/contain no-repeat url(../img/sep-chic-3.svg);
+}
+
+.menu__bloc--delice {
+  background: #edefef;
+  font-family: 'Nanum Pen Script', cursive;
+  font-style: italic;
+  color: black;
+}
+
+.menu__bloc--delice h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.menu__bloc--delice .course {
+  font-size: 1.7rem;
+}
+
+.menu__bloc--delice .course__separator--after {
+  transform: scaleX(-1);
+}
+
+.menu__bloc--delice table {
+  font-size: 1.5rem;
+}
+
+.menu__bloc--delice td {
+  padding-top: 0.3em;
+}
+
+.menu__bloc--delice .course__separator--1 {
+  background: center/contain no-repeat url(../img/sep-delice-1.svg);
+}
+
+.menu__bloc--delice .course__separator--2 {
+  background: center/contain no-repeat url(../img/sep-delice-2.svg);
+}
+
+.menu__bloc--delice .course__separator--3 {
+  background: center/contain no-repeat url(../img/sep-delice-3.svg);
+}
+
+.menu__bloc--palette {
+  background: #fdfffd;
+  color: black;
+  font-family: 'Itim', cursive;
+  font-style: italic;
+}
+
+.menu__bloc--palette h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+}
+
+.menu__bloc--palette .course__separator {
+  background: center/contain no-repeat url(../img/sep-palette.svg);
+}
+
+.menu__bloc--palette .course h4 {
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=style.css.map */

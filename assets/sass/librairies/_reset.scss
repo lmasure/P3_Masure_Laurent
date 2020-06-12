@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+main {
+    display: block;
+    margin: 5rem 3% 8rem 3%;
+    min-width: 500px;
+    @include desktop-only {
+        margin: 8rem 3% 8rem 3%;
+    }
+}

@@ -1,0 +1,209 @@
+.menu {
+    max-width: 800px;
+    margin: auto;
+
+    &__bloc {
+        box-shadow: 0 0 10px #bbba;
+        padding: 30px 10px;
+        @include desktop-only {
+            padding: 60px 80px;
+        }
+        
+        h3 {
+            margin: 0;
+            text-align: center;
+            font-size: 3.4rem;
+            font-weight: 400;
+        }
+        // Titre : entrée/plat/dessert
+        .course { 
+            position: relative;
+            margin: 75px 0 15px 0;
+            text-align: center;
+            font-size: 1.7rem;
+            &:first-of-type {
+                margin-top: 50px;
+            }
+            // séparateurs SVG avant et après le titre :
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &__separator {
+                display: inline-block;
+                width: 30%;
+                height: 1em;
+                &--after {
+                    transform: scaleX(-1);
+                }
+            }
+            // soulignement animé du h4 au hover :
+            h4 {
+                margin: 0;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.3em;
+                    right: -0.5em;
+                    left: -0.5em;
+                    height: 2px;
+                    border-radius: 2px;
+                    opacity: 0;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: opacity 400ms, transform 600ms;
+                }
+            }
+            &:hover > h4::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+        // Corps du menu
+        table {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        td {
+            padding-top: 1em;
+            &:nth-child(2) {
+                text-align: right;
+                padding-left: 20px;
+                font-size: 1.1em;
+            }
+        }
+        
+        &--note {
+            background: $menu-bg1;
+            color: $txt-color-menu1;
+            font-family: 'Itim', cursive;
+            font-style: italic;
+            h3 {
+                font-family: 'Devonshire', cursive;
+                font-style: normal;
+                & img{
+                  width: 7rem;
+                }
+            }
+            .course {
+                &__separator {
+                    background: center / contain no-repeat url(/assets/images/menu1-bar.svg);
+                }
+
+            }
+            .title-bottom {
+                margin-top: 50px;
+                text-align: center;
+                font-family: 'Devonshire', cursive;
+                font-style: normal;
+                font-size: 2.5rem;
+                & img {
+                    width: 2.5rem;
+                }
+            }
+        }
+        &--chic {
+            background: $menu-bg2;
+            font-family: $txt-menu2-title;
+            h3 {
+                font-family: $txt-menu2-menu, cursive;
+                font-size: 2.2rem;
+                // @include textGradient(0.25turn, $color-chic-grad1, $color-chic-grad2);
+            }
+            .course {
+                font-size: 1.3rem;
+                font-weight: 700;
+                
+            }
+            table {
+                font-size: 1.1rem;
+            }
+            // Variations de couleurs entre les entrées/plat/desserts
+            @for $i from 1 through 3 {
+                .course {
+                    &__separator--#{$i} {
+                        background: center / contain no-repeat url(../img/sep-chic-#{$i}.svg);
+                    }
+                }
+                // .course:nth-of-type(#{$i}) {
+                //     h4 {
+                //         color: nth($colorSet-chic, $i);
+                //     }
+                //     h4::after {
+                //         background: nth($colorSet-chic, $i);
+                //         box-shadow: 0 0 5px nth($colorSet-chic, $i);
+                //     }
+                // }
+                // table:nth-of-type(#{$i}) {
+                //     color: nth($colorSet-chic, $i);
+                // }
+                
+            }
+            
+        }
+        &--delice {
+            background: $menu-bg3;
+            font-family: 'Nanum Pen Script', cursive;
+            font-style: italic;
+            color: black;
+            h3 {
+                font-family: 'Dancing Script', cursive;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 4rem;
+                // @include textGradient(0.25turn, $color-delice-grad1, $color-delice-grad2);
+            }
+            .course {
+                font-size: 1.7rem;
+                &__separator--after {
+                    transform: scaleX(-1);
+                } 
+            }
+            table {
+                font-size: 1.5rem;
+            }
+            td {
+                padding-top: 0.3em;
+            }
+            // Variations de couleurs entre les entrées/plat/desserts
+            @for $i from 1 through 3 {
+                .course {
+                    &__separator--#{$i} {
+                        background: center / contain no-repeat url(../img/sep-delice-#{$i}.svg);
+                    }
+                }
+                // .course:nth-of-type(#{$i}) {
+                    
+                //     h4::after {
+                //         background: nth($colorSet-delice, $i);
+                //         box-shadow: 0 0 5px nth($colorSet-delice, $i);
+                //     }
+                // }
+            }
+        }
+        &--palette {
+            background: $menu-bg4;
+            color: black;
+            font-family: 'Itim', cursive;
+            font-style: italic;
+            h3 {
+                font-family: 'Kaushan Script', cursive;
+                font-style: normal;
+                // @include textGradient(0.25turn, $color-palette-grad1, $color-palette-grad2);
+            }
+            .course {
+                &__separator {
+                    background: center / contain no-repeat url(../img/sep-palette.svg);
+                }
+                h4 {
+                    font-size: 1.3rem;
+                }
+                // h4::after {
+                //     background: $color-palette-txt;
+                //     box-shadow: 0 0 5px $color-palette-txt;
+                // }
+            }
+        }
+    }
+}

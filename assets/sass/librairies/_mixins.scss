@@ -1,0 +1,28 @@
+// RESPONSIVE pour les desktops
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+  }
+
+  // Style commun au header et au footer
+@mixin headerStyle {
+    color: $txt-color;
+    background: $color-primary;
+    font-family: $txt-head-tittle;
+}
+
+/**
+ * Gradient de couleur sur le TEXTE
+ * $direction : direction du gradient (par défaut : de haut vers le bas)
+ * $color1 : 1ere couleur du gradient
+ * $color2 : 2eme couleur du gradient
+ */
+@mixin textGradient($direction: 0, $color1: $color-bg, $color2: $color-txt) {
+    background-image: linear-gradient($direction, $color1, $color2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

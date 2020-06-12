@@ -1,0 +1,107 @@
+.menu-grille {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+
+    &__bloc {
+        width: 350px;
+        height: 510px;
+        margin: 0 10px 50px 10px;
+        box-shadow: 0 0 10px #bbba;
+        text-align: center;
+        // Media Querry : en desktop
+        @include desktop-only {
+            margin: 0 20px 50px 20px;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;   
+        }
+        h2 {
+            font-size: 1.9rem;
+            line-height: 1.9em;
+            font-weight: 400;
+            margin: 15px 0;
+        }
+        p {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        // Animation : opacité pour toute la carte, et scale uniquement pour la div "zoom" dans la carte
+        transition: opacity 400ms ease-in-out;
+        overflow: hidden; // pour ne pas dépasser de la carte lors du scale
+        z-index: 1; // pour rester SOUS les header et footer...
+        .zoom {
+            transition: transform 400ms ease-in-out;
+        }
+        &:hover .zoom {
+            transform: scale(1.15);
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+
+        // Menu de "La note enchantée"
+        &--note {
+            background: $menu-bg1;
+            h2 {
+                font-family: $txt-menu1-title;
+            }
+            p {
+                font-family: $txt-menu1-menu;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+
+        // Menu de "Le chic à la Française"
+        &--chic {
+            background: $menu-bg2;
+            color: $txt-color-menu2;
+            h2 {
+                font-family: 'Croissant One', cursive;
+                font-size: 1.4em;
+                @include textGradient(0.25turn, $grad-color-menu2-start, $grad-color-menu2-end);
+            }
+            p {
+                font-family: 'DM Serif Text', serif;
+            }
+        }
+
+        // Menu de "Le délice des papilles"
+        &--delice {
+            background: $menu-bg3;
+            
+            h2 {
+                font-family: $txt-menu3-title;
+                font-size: 2.2em;
+                @include textGradient(0.25turn, $grad-color-menu2-start, $grad-color-menu2-end);
+            }
+            p {
+                font-family: 'Nanum Pen Script', cursive;
+                font-style: italic;
+            }
+        }
+
+        // Menu de "La palette du goût"
+        &--palette {
+            background: $menu-bg4;
+            
+            h2 {
+                font-family: $txt-menu4-title;
+                font-size: 2.2em;
+                @include textGradient(0.25turn, $grad-color-menu4-start, $grad-color-menu4-end);
+            }
+            p {
+                font-family: 'Nanum Pen Script', cursive;
+                font-style: italic;
+            }
+        }
+    }
+}
