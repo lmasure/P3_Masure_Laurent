@@ -38,7 +38,7 @@
                 }
             }
             // ! ne fonctionne pas
-            .souligne {
+            &--souligne {
                 margin: 0;
                 position: relative;
                 &::after {
@@ -54,24 +54,19 @@
                     transform-origin: left;
                     transition: opacity 400ms, transform 600ms;
                 }
-            }
-            &:hover > .souligne::after {
+                &:hover::after {
                 opacity: 1;
                 transform: scaleX(1);
             }
+            }
         }
         // Corps du menu
-        table {
-            width: 100%;
+        .plats-detail{
+            display: flex;
+            justify-content: space-between;
             font-size: 1.1rem;
-        }
-        td {
-            padding-top: 1em;
-            &:nth-child(2) {
-                text-align: right;
-                padding-left: 20px;
-                font-size: 1.1em;
-            }
+            margin-bottom:20px;
+
         }
 
         //style des pages de menus
@@ -113,14 +108,16 @@
                 font-size: 2rem;
                 @include grad-menu;
             }
+            .bloc-plats{
+                margin-left: 10%;
+                margin-right: 10%;
+            }
             .plats {
                 font-size: 1.3rem;
                 font-weight: 700;
                 
             }
-            table {
-                font-size: 1.1rem;
-            }
+            
             // Changement des 3 couleurs 
             @for $i from 1 through 3 {
                 .plats {
@@ -133,12 +130,12 @@
                         color: nth($color-plats-menu2, $i);
                     }
                     //! tiret sous les titres ne fonctionne pas
-                    // .souligne::after {
-                    //     background: nth($color-plats-menu2, $i);
-                    //     box-shadow: 0 0 5px nth($color-plats-menu2, $i);
-                    // }
+                    .souligne::after {
+                        background: nth($color-plats-menu2, $i);
+                        box-shadow: 0 0 5px nth($color-plats-menu2, $i);
+                    }
                 }
-                table:nth-of-type(#{$i}) {
+                .bloc-plats:nth-of-type(#{$i}) {
                     color: nth($color-plats-menu2, $i);
                 }
                 
@@ -153,8 +150,12 @@
                 font-family: $txt-menu3-title;
                 font-weight: 600;
                 font-style: normal;
-                font-size: 4rem;
+                font-size: 3rem;
                 @include grad-menu(0.25turn, $grad-color-menu3-start, $grad-color-menu3-end);
+            }
+             .bloc-plats{
+                margin-left: 10%;
+                margin-right: 10%;
             }
             h4{
             font-weight: 200;
@@ -165,16 +166,7 @@
                     transform: scaleX(-1);
                 } 
             }
-            table {
-                font-size: 1rem;
-                font-style: italic;
-                margin-left: 50px;
-                padding-right:-50px;
             
-            }
-            td {
-                padding-top: 0.3em;
-            }
             @for $i from 1 through 3 {
                 .plats {
                     &__separator--#{$i} {
@@ -182,13 +174,13 @@
                     }
                 }
                 //! soulignement ne fonctionne pas
-                // .plats:nth-of-type(#{$i}) {
+                .plats:nth-of-type(#{$i}) {
                     
-                //     h4::after {
-                //         background: nth($colorSet-delice, $i);
-                //         box-shadow: 0 0 5px nth($colorSet-delice, $i);
-                //     }
-                // }
+                    h4::after {
+                        background: nth($color-plats-menu3, $i);
+                        box-shadow: 0 0 5px nth($color-plats-menu3, $i);
+                    }
+                }
             }
         }
         &--palette {
@@ -196,6 +188,10 @@
             color: black;
             font-family: $txt-menu1-menu;
             font-style: italic;
+            .bloc-plats{
+                margin-left: 5%;
+                margin-right: 5%;
+            }
             h3 {
                 font-family: $txt-menu4-title;
                 font-style: normal;
@@ -210,7 +206,7 @@
                     background: center / contain no-repeat url(/assets/images/menu4-bar.svg);
                 }
                 h4 {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                 }
                 h4::after {
                     background: $grad-color-menu4-start;

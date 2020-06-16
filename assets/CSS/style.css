@@ -240,12 +240,13 @@ main {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(0.25turn, #3d943a, #bdff80);
+  background-image: linear-gradient(160deg, #3d943a, #bdff80);
 }
 
 .menu-grille__bloc--palette p {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Komika", cursive;
   font-style: italic;
+  color: #71c66e;
 }
 
 .btn {
@@ -393,12 +394,12 @@ main {
   transform: scaleX(-1);
 }
 
-.menu__bloc .plats .souligne {
+.menu__bloc .plats--souligne {
   margin: 0;
   position: relative;
 }
 
-.menu__bloc .plats .souligne::after {
+.menu__bloc .plats--souligne::after {
   content: "";
   position: absolute;
   bottom: -0.3em;
@@ -412,24 +413,16 @@ main {
   transition: opacity 400ms, transform 600ms;
 }
 
-.menu__bloc .plats:hover > .souligne::after {
+.menu__bloc .plats--souligne:hover::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
-.menu__bloc table {
-  width: 100%;
+.menu__bloc .plats-detail {
+  display: flex;
+  justify-content: space-between;
   font-size: 1.1rem;
-}
-
-.menu__bloc td {
-  padding-top: 1em;
-}
-
-.menu__bloc td:nth-child(2) {
-  text-align: right;
-  padding-left: 20px;
-  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 .menu__bloc--note {
@@ -480,13 +473,14 @@ main {
   background-image: linear-gradient(160deg, #C67412, #A56799);
 }
 
+.menu__bloc--chic .bloc-plats {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .menu__bloc--chic .plats {
   font-size: 1.3rem;
   font-weight: 700;
-}
-
-.menu__bloc--chic table {
-  font-size: 1.1rem;
 }
 
 .menu__bloc--chic .plats__separator--1 {
@@ -497,7 +491,12 @@ main {
   color: #C67412;
 }
 
-.menu__bloc--chic table:nth-of-type(1) {
+.menu__bloc--chic .plats:nth-of-type(1) .souligne::after {
+  background: #C67412;
+  box-shadow: 0 0 5px #C67412;
+}
+
+.menu__bloc--chic .bloc-plats:nth-of-type(1) {
   color: #C67412;
 }
 
@@ -509,7 +508,12 @@ main {
   color: #A56799;
 }
 
-.menu__bloc--chic table:nth-of-type(2) {
+.menu__bloc--chic .plats:nth-of-type(2) .souligne::after {
+  background: #A56799;
+  box-shadow: 0 0 5px #A56799;
+}
+
+.menu__bloc--chic .bloc-plats:nth-of-type(2) {
   color: #A56799;
 }
 
@@ -521,7 +525,12 @@ main {
   color: #6E4CCC;
 }
 
-.menu__bloc--chic table:nth-of-type(3) {
+.menu__bloc--chic .plats:nth-of-type(3) .souligne::after {
+  background: #6E4CCC;
+  box-shadow: 0 0 5px #6E4CCC;
+}
+
+.menu__bloc--chic .bloc-plats:nth-of-type(3) {
   color: #6E4CCC;
 }
 
@@ -535,13 +544,18 @@ main {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 3rem;
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   background-image: linear-gradient(0.25turn, #2602df, #3896f8);
+}
+
+.menu__bloc--delice .bloc-plats {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .menu__bloc--delice h4 {
@@ -556,27 +570,31 @@ main {
   transform: scaleX(-1);
 }
 
-.menu__bloc--delice table {
-  font-size: 1rem;
-  font-style: italic;
-  margin-left: 50px;
-  padding-right: -50px;
-}
-
-.menu__bloc--delice td {
-  padding-top: 0.3em;
-}
-
 .menu__bloc--delice .plats__separator--1 {
   background: center/contain no-repeat url(/assets/images/menu3-bar-1.svg);
+}
+
+.menu__bloc--delice .plats:nth-of-type(1) h4::after {
+  background: #2602df;
+  box-shadow: 0 0 5px #2602df;
 }
 
 .menu__bloc--delice .plats__separator--2 {
   background: center/contain no-repeat url(/assets/images/menu3-bar-2.svg);
 }
 
+.menu__bloc--delice .plats:nth-of-type(2) h4::after {
+  background: #2b64f2;
+  box-shadow: 0 0 5px #2b64f2;
+}
+
 .menu__bloc--delice .plats__separator--3 {
   background: center/contain no-repeat url(/assets/images/menu3-bar-3.svg);
+}
+
+.menu__bloc--delice .plats:nth-of-type(3) h4::after {
+  background: #3896f8;
+  box-shadow: 0 0 5px #3896f8;
 }
 
 .menu__bloc--palette {
@@ -584,6 +602,11 @@ main {
   color: black;
   font-family: "Komika", cursive;
   font-style: italic;
+}
+
+.menu__bloc--palette .bloc-plats {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .menu__bloc--palette h3 {
@@ -607,7 +630,7 @@ main {
 }
 
 .menu__bloc--palette .plats h4 {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .menu__bloc--palette .plats h4::after {

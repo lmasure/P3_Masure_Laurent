@@ -31,11 +31,6 @@
             font-size: 2.8rem;
             margin: 0;
         }
-
-        // Animation : opacité pour toute la carte, et scale uniquement pour la div "zoom" dans la carte
-        // transition: opacity 400ms ease-in-out;
-        // overflow: hidden; // pour ne pas dépasser de la carte lors du scale
-        // z-index: 1; // pour rester SOUS les header et footer...
         .zoom {
             transition: transform 400ms ease-in-out;
         }
@@ -102,11 +97,12 @@
             h2 {
                 font-family: $txt-menu4-title;
                 font-size: 2.2em;
-                @include grad-menu(0.25turn, $grad-color-menu4-start, $grad-color-menu4-end);
+                @include grad-menu(160deg, $grad-color-menu4-start, $grad-color-menu4-end);
             }
             p {
-                font-family: 'Nanum Pen Script', cursive;
+                font-family: $txt-menu1-menu;
                 font-style: italic;
+                color: lighten($color:$grad-color-menu4-start, $amount: 20);
             }
         }
     }
