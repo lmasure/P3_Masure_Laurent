@@ -125,7 +125,7 @@ main {
   width: 350px;
   height: 510px;
   margin: 0 10px 50px 10px;
-  box-shadow: 0 0 10px #bbba;
+  box-shadow: 0 0 10px #bbbbbbb6;
   text-align: center;
 }
 
@@ -527,20 +527,29 @@ main {
 
 .menu__bloc--delice {
   background: #edefef;
-  font-family: 'Nanum Pen Script', cursive;
-  font-style: italic;
+  font-family: "Komika", cursive;
   color: black;
 }
 
 .menu__bloc--delice h3 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 600;
   font-style: normal;
   font-size: 4rem;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(0.25turn, #2602df, #3896f8);
+}
+
+.menu__bloc--delice h4 {
+  font-weight: 200;
 }
 
 .menu__bloc--delice .plats {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .menu__bloc--delice .plats__separator--after {
@@ -548,7 +557,10 @@ main {
 }
 
 .menu__bloc--delice table {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-style: italic;
+  margin-left: 50px;
+  padding-right: -50px;
 }
 
 .menu__bloc--delice td {
@@ -556,34 +568,66 @@ main {
 }
 
 .menu__bloc--delice .plats__separator--1 {
-  background: center/contain no-repeat url(../img/sep-delice-1.svg);
+  background: center/contain no-repeat url(/assets/images/menu3-bar-1.svg);
 }
 
 .menu__bloc--delice .plats__separator--2 {
-  background: center/contain no-repeat url(../img/sep-delice-2.svg);
+  background: center/contain no-repeat url(/assets/images/menu3-bar-2.svg);
 }
 
 .menu__bloc--delice .plats__separator--3 {
-  background: center/contain no-repeat url(../img/sep-delice-3.svg);
+  background: center/contain no-repeat url(/assets/images/menu3-bar-3.svg);
 }
 
 .menu__bloc--palette {
   background: #fdfffd;
   color: black;
-  font-family: 'Itim', cursive;
+  font-family: "Komika", cursive;
   font-style: italic;
 }
 
 .menu__bloc--palette h3 {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   font-style: normal;
+  padding-bottom: 20px;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(160deg, #3d943a, #bdff80);
+}
+
+.menu__bloc--palette h4 {
+  font-weight: 200;
 }
 
 .menu__bloc--palette .plats__separator {
-  background: center/contain no-repeat url(../img/sep-palette.svg);
+  background: center/contain no-repeat url(/assets/images/menu4-bar.svg);
 }
 
 .menu__bloc--palette .plats h4 {
   font-size: 1.3rem;
+}
+
+.menu__bloc--palette .plats h4::after {
+  background: #3d943a;
+  box-shadow: 0 0 5px #3d943a;
+}
+
+.mentions {
+  font-family: "Komika", cursive;
+}
+
+.mentions div {
+  background-color: #edefef;
+}
+
+.mentions h3 {
+  margin-bottom: 50px;
+}
+
+.mentions p {
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */
