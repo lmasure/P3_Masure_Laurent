@@ -418,7 +418,7 @@ main {
 }
 
 .menu__bloc--note .plats__separator {
-  background: center/contain no-repeat url(/assets/images/menu1-bar.svg);
+  background: center/contain no-repeat url(../images/menu1-bar.svg);
 }
 
 .menu__bloc--note .plats--souligne {
@@ -431,8 +431,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -498,8 +498,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -539,8 +539,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -580,8 +580,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -657,8 +657,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -690,8 +690,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -723,8 +723,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;
@@ -789,8 +789,8 @@ main {
   background: #3c1319;
   position: absolute;
   bottom: -0.3em;
-  right: -0.5em;
-  left: -0.5em;
+  right: 0;
+  left: 0;
   height: 2px;
   border-radius: 2px;
   opacity: 0;

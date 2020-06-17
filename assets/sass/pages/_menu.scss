@@ -63,7 +63,7 @@
       .plats {
         &__separator {
           background: center / contain no-repeat
-            url(/assets/images/menu1-bar.svg);
+            url(../images/menu1-bar.svg);
         }
         &--souligne {
           @include souligne;
