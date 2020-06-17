@@ -32,7 +32,7 @@
                 position: relative;
                 &::after {
                     content: "";
-                    background: $background;
+                    background:$txt-color-menu1;
                     position: absolute;
                     bottom: -0.3em;
                     right: -0.5em;

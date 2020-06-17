@@ -623,7 +623,7 @@ main {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(0.25turn, #2602df, #3896f8);
+  background-image: linear-gradient(45deg, #2602df, #3896f8);
 }
 
 .menu__bloc--delice .bloc-plats {
@@ -673,7 +673,7 @@ main {
 }
 
 .menu__bloc--delice .plats--souligne::after {
-  background: #C67412;
+  background: #2602df;
 }
 
 .menu__bloc--delice .plats__separator--2 {
@@ -706,7 +706,7 @@ main {
 }
 
 .menu__bloc--delice .plats--souligne::after {
-  background: #A56799;
+  background: #2b64f2;
 }
 
 .menu__bloc--delice .plats__separator--3 {
@@ -739,7 +739,7 @@ main {
 }
 
 .menu__bloc--delice .plats--souligne::after {
-  background: #6E4CCC;
+  background: #3896f8;
 }
 
 .menu__bloc--palette {

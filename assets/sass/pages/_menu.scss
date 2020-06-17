@@ -66,7 +66,7 @@
             url(/assets/images/menu1-bar.svg);
         }
         &--souligne {
-          @include souligne($background: $txt-color-menu1);
+          @include souligne;
         }
       }
       .title-bottom {
@@ -134,7 +134,7 @@
         font-style: normal;
         font-size: 3rem;
         @include grad-menu(
-          0.25turn,
+          45deg,
           $grad-color-menu3-start,
           $grad-color-menu3-end
         );
@@ -163,7 +163,7 @@
           &--souligne {
             @include souligne;
             &::after {
-              background: nth($color-plats-menu2, $i);
+              background: nth($color-plats-menu3, $i);
             }
           }
         }
