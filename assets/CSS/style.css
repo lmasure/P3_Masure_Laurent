@@ -418,7 +418,7 @@ main {
 }
 
 .menu__bloc--note .plats__separator {
-  background: center/contain no-repeat url(/assets/images/menu1-bar.svg);
+  background: center/contain no-repeat url(./assets/images/menu1-bar.svg);
 }
 
 .menu__bloc--note .plats--souligne {
@@ -485,7 +485,7 @@ main {
 }
 
 .menu__bloc--chic .plats__separator--1 {
-  background: center/contain no-repeat url(/assets/images/menu2-bar-1.svg);
+  background: center/contain no-repeat url(./assets/images/menu2-bar-1.svg);
 }
 
 .menu__bloc--chic .plats--souligne {
@@ -526,7 +526,7 @@ main {
 }
 
 .menu__bloc--chic .plats__separator--2 {
-  background: center/contain no-repeat url(/assets/images/menu2-bar-2.svg);
+  background: center/contain no-repeat url(./assets/images/menu2-bar-2.svg);
 }
 
 .menu__bloc--chic .plats--souligne {
@@ -567,7 +567,7 @@ main {
 }
 
 .menu__bloc--chic .plats__separator--3 {
-  background: center/contain no-repeat url(/assets/images/menu2-bar-3.svg);
+  background: center/contain no-repeat url(./assets/images/menu2-bar-3.svg);
 }
 
 .menu__bloc--chic .plats--souligne {
@@ -644,7 +644,7 @@ main {
 }
 
 .menu__bloc--delice .plats__separator--1 {
-  background: center/contain no-repeat url(/assets/images/menu3-bar-1.svg);
+  background: center/contain no-repeat url(./assets/images/menu3-bar-1.svg);
 }
 
 .menu__bloc--delice .plats--souligne {
@@ -677,7 +677,7 @@ main {
 }
 
 .menu__bloc--delice .plats__separator--2 {
-  background: center/contain no-repeat url(/assets/images/menu3-bar-2.svg);
+  background: center/contain no-repeat url(./assets/images/menu3-bar-2.svg);
 }
 
 .menu__bloc--delice .plats--souligne {
@@ -710,7 +710,7 @@ main {
 }
 
 .menu__bloc--delice .plats__separator--3 {
-  background: center/contain no-repeat url(/assets/images/menu3-bar-3.svg);
+  background: center/contain no-repeat url(./assets/images/menu3-bar-3.svg);
 }
 
 .menu__bloc--delice .plats--souligne {
@@ -772,7 +772,7 @@ main {
 }
 
 .menu__bloc--palette .plats__separator {
-  background: center/contain no-repeat url(/assets/images/menu4-bar.svg);
+  background: center/contain no-repeat url(./assets/images/menu4-bar.svg);
 }
 
 .menu__bloc--palette .plats h4 {
