@@ -11,6 +11,7 @@
     font-family: $txt-head-tittle;
 }
 
+//regles communes pour la création des degradés
 @mixin grad-menu($direction: 160deg, $color1:$grad-color-menu2-start, $color2:$grad-color-menu2-end) {
   background-size: 100%;
   -webkit-background-clip: text;
@@ -23,3 +24,28 @@
     $color2
   );
 }
+
+//effet soulignement dynamique dans les menus
+
+   @mixin souligne($background:$txt-color-menu1) {
+                margin: 0;
+                position: relative;
+                &::after {
+                    content: "";
+                    background: $background;
+                    position: absolute;
+                    bottom: -0.3em;
+                    right: -0.5em;
+                    left: -0.5em;
+                    height: 2px;
+                    border-radius: 2px;
+                    opacity: 0;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: opacity 400ms, transform 600ms;
+                }
+                &:hover::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+            }
