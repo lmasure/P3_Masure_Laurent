@@ -3,7 +3,7 @@
   justify-content: center;
 
   //effet sur hover du bouton
-  &:hover .dot {
+  & .dot {
         animation: point 1.7s ease-in-out infinite;
         opacity: 1;
         &:nth-child(2) {

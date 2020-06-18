@@ -31,9 +31,15 @@
             font-size: 2.8rem;
             margin: 0;
         }
+
+        
         .zoom {
             transition: transform 400ms ease-in-out;
         }
+
+        transition: opacity 400ms ease-in-out;
+        overflow: hidden; // regle le problème de depassement au zoom
+        z-index: 1; // le bloc reste au second plan
         &:hover .zoom {
             transform: scale(1.15);
         }
