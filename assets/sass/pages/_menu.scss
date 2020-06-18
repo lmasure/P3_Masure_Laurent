@@ -63,8 +63,7 @@
       }
       .plats {
         &__separator {
-          background: center / contain no-repeat
-            url(../images/menu1-bar.svg);
+          background: center / contain no-repeat url(../images/menu1-bar.svg);
         }
         &--souligne {
           @include souligne;
@@ -100,35 +99,51 @@
       .plats {
         font-size: 1.3rem;
         font-weight: 700;
-      }
+        //regles pour le premier bloc
+        &__separator--1 {
+          background: center / contain no-repeat url(../images/menu2-bar-1.svg);
+        }
 
-      // boucle pour changer les couleurs en fonction de la position des éléments
-      @for $i from 1 through 3 {
-        .plats {
-          &__separator--#{$i} {
-            background: center /
-              contain
-              no-repeat
-              url(../images/menu2-bar-#{$i}.svg);
-          }
-
-          &--souligne {
-            @include souligne($background: $txt-color-menu1);
+        &--color1 {
+          color: $grad-color-menu2-start;
+          & h4 {
+            @include souligne;
             &::after {
-              background: nth($color-plats-menu2, $i);
+              background: $grad-color-menu2-start;
             }
           }
         }
-        .plats:nth-of-type(#{$i}) {
-          h4 {
-            color: nth($color-plats-menu2, $i);
+        //regles pour le second bloc
+        &__separator--2 {
+          background: center / contain no-repeat url(../images/menu2-bar-2.svg);
+        }
+
+        &--color2 {
+          color: $grad-color-menu2-mid;
+          & h4 {
+            @include souligne;
+            &::after {
+              background: $grad-color-menu2-mid;
+            }
           }
         }
-        .bloc-plats:nth-of-type(#{$i}) {
-          color: nth($color-plats-menu2, $i);
+        //regles pour le troisième bloc
+        &__separator--3 {
+          background: center / contain no-repeat url(../images/menu2-bar-3.svg);
+        }
+
+        &--color3 {
+          color: $grad-color-menu2-end;
+          & h4 {
+            @include souligne;
+            &::after {
+              background: $grad-color-menu2-end;
+            }
+          }
         }
       }
     }
+
     &--delice {
       background: $menu-bg3;
       font-family: $txt-menu1-menu;
@@ -153,6 +168,26 @@
       }
       .plats {
         font-size: 1.3rem;
+
+        &--souligne1 {
+          @include souligne;
+          &::after {
+            background: $grad-color-menu3-start;
+          }
+        }
+        &--souligne2 {
+          @include souligne;
+          &::after {
+            background: $grad-color-menu3-midd;
+          }
+        }
+        &--souligne3 {
+          @include souligne;
+          &::after {
+            background: $grad-color-menu3-end;
+          }
+        }
+
         &__separator--after {
           transform: scaleX(-1);
         }
@@ -164,12 +199,6 @@
               contain
               no-repeat
               url(../images/menu3-bar-#{$i}.svg);
-          }
-          &--souligne {
-            @include souligne;
-            &::after {
-              background: nth($color-plats-menu3, $i);
-            }
           }
         }
       }
@@ -197,22 +226,20 @@
       h4 {
         font-weight: 400;
         font-size: 1em !important;
-        
       }
       .plats {
         &__separator {
-          background: center / contain no-repeat
-            url(../images/menu4-bar.svg);
+          background: center / contain no-repeat url(../images/menu4-bar.svg);
         }
         h4 {
           font-size: 1rem;
         }
         &--souligne {
-            @include souligne;
-            &::after {
-              background: $grad-color-menu4-start;
-            }
+          @include souligne;
+          &::after {
+            background: $grad-color-menu4-start;
           }
+        }
       }
     }
   }
