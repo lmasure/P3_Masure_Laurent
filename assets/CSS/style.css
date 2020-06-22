@@ -76,7 +76,7 @@ a {
 
 main {
   display: block;
-  margin: 5rem 3% 8rem 3%;
+  margin-top: 80px;
   min-width: 500px;
 }
 
@@ -125,7 +125,7 @@ main {
   width: 350px;
   height: 510px;
   margin: 0 10px 50px 10px;
-  box-shadow: 0 0 10px #bbbbbbb6;
+  box-shadow: 0 0 10px #a6a6a0;
   text-align: center;
   transition: opacity 400ms ease-in-out;
   overflow: hidden;
@@ -351,17 +351,22 @@ main {
 
 .menu {
   max-width: 800px;
-  margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    margin: auto;
+  }
 }
 
 .menu__bloc {
-  box-shadow: 0 0 10px #bbba;
   padding: 30px 10px;
 }
 
 @media screen and (min-width: 700px) {
   .menu__bloc {
     padding: 60px 80px;
+    box-shadow: 0 0 10px #a6a6a0;
   }
 }
 
@@ -378,13 +383,19 @@ main {
   text-align: center;
   font-size: 1.7rem;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .menu__bloc .plats:first-of-type {
   margin-top: 50px;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__bloc .plats {
+    flex-direction: row;
+  }
 }
 
 .menu__bloc .plats__separator {
@@ -399,9 +410,20 @@ main {
 
 .menu__bloc .plats-detail {
   display: flex;
-  justify-content: space-between;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__bloc .plats-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
 }
 
 .menu__bloc--note {

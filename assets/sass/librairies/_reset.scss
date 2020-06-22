@@ -15,7 +15,7 @@ a {
 }
 main {
     display: block;
-    margin: 5rem 3% 8rem 3%;
+    margin-top: 80px;
     min-width: 500px;
     @include desktop-only {
         margin: 8rem 3% 8rem 3%;
