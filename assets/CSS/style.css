@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: 'Komika';
-  src: url(/fonts/Komika.ttf);
+  src: url(/assets/fonts/Komika.ttf);
 }
 
 * {
@@ -421,7 +421,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 20px;
   }
 }
@@ -456,7 +456,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -531,7 +531,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -568,7 +568,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -605,7 +605,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -666,7 +666,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -695,7 +695,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -724,7 +724,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
@@ -806,7 +806,7 @@ main {
   content: "";
   background: #3c1319;
   position: absolute;
-  bottom: -0.3em;
+  bottom: -0.1em;
   right: 0;
   left: 0;
   height: 2px;
