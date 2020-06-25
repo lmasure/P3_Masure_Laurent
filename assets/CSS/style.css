@@ -115,7 +115,7 @@ main {
   flex-flow: row wrap;
   justify-content: space-evenly;
   padding-top: 20px;
-  max-width: 1200px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -423,8 +423,9 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+    text-align: left;
   }
 }
 
