@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  //effet sur hover du bouton
+  //effet du bouton
   & .dot {
         animation: point 1.7s ease-in-out infinite;
         opacity: 1;
@@ -16,7 +16,7 @@
 
   &__txt {
     padding: 0.5em 1.5em;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 1.3rem;
     text-align: center;
     border-radius: 0.5em;
@@ -27,14 +27,12 @@
 
     .dot {
       display: inline-block;
-      width: 7px;
-      height: 7px;
       background: $txt-color;
       border-radius: 50%;
       
       @include desktop-only {
-        width: 10px;
-        height: 10px;
+        width: 5px;
+        height: 5px;
       }
     }
   }

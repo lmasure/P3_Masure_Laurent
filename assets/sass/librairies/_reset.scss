@@ -1,9 +1,11 @@
+//mise à zero des paramètres par defaut et definition des marges du conteneur principal
+
 * {
     box-sizing: border-box;
 }
 html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
 }
 body {
     margin: 0;
