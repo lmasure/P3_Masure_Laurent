@@ -27,16 +27,7 @@
       display: block;
       padding: 0.3em 1.2em;
       &:hover {
-        animation: shake 100ms ;
-        animation-iteration-count: 20;  //nombre de cycles avant arrêt
-        @keyframes shake {
-          from {
-            transform: rotate(3deg);
-          }
-          to {
-            transform: rotate(-3deg);
-          }
-        }
+        @include shake;
       }
     }
   }

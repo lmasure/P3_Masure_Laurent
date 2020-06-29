@@ -1,51 +1,76 @@
 // media query mobile first
 @mixin desktop-only {
-    @media screen and (min-width: map-get($breakpoints, desktop)){
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
   }
+}
 
 @mixin headerStyle {
-    color: $txt-color;
-    background: $color-primary;
-    font-family: $txt-head-tittle;
+  color: $txt-color;
+  background: $color-primary;
+  font-family: $txt-head-tittle;
+}
+
+//animation des points sur le bouton
+@mixin dot {
+  animation: point 1.7s ease-in-out infinite;
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+}
+
+//animation wiggle des liens footer
+@mixin shake {
+  animation: shake 100ms;
+  animation-iteration-count: 20; //nombre de cycles avant arrêt
+  @keyframes shake {
+    from {
+      transform: rotate(3deg);
+    }
+    to {
+      transform: rotate(-3deg);
+    }
+  }
 }
 
 //regles communes pour la création des degradés
-@mixin grad-menu($direction: 160deg, $color1:$grad-color-menu2-start, $color2:$grad-color-menu2-end) {
+@mixin grad-menu(
+  $direction: 160deg,
+  $color1: $grad-color-menu2-start,
+  $color2: $grad-color-menu2-end
+) {
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(
-    $direction,
-    $color1,
-    $color2
-  );
+  background-image: linear-gradient($direction, $color1, $color2);
 }
 
 //effet soulignement dynamique dans les menus
 
-   @mixin souligne($background:$txt-color-menu1) {
-                margin: 0;
-                position: relative;
-                &::after {
-                    content: "";
-                    background:$txt-color-menu1;
-                    position: absolute;
-                    bottom: -0.1em;
-                    right: 0;
-                    left: 0;
-                    height: 2px;
-                    border-radius: 2px;
-                    opacity: 0;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: opacity 400ms, transform 600ms;
-                }
-                &:hover::after {
-                opacity: 1;
-                transform: scaleX(1);
-            }
-            }
+@mixin souligne($background: $txt-color-menu1) {
+  margin: 0;
+  position: relative;
+  &::after {
+    content: "";
+    background: $txt-color-menu1;
+    position: absolute;
+    bottom: -0.1em;
+    right: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity 400ms, transform 600ms;
+  }
+  &:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}

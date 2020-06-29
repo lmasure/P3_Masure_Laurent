@@ -257,7 +257,6 @@ main {
 
 .btn .dot {
   animation: point 1.7s ease-in-out infinite;
-  opacity: 1;
 }
 
 .btn .dot:nth-child(2) {
