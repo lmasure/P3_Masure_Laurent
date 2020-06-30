@@ -75,10 +75,9 @@ a {
 main {
   display: block;
   margin-top: 80px;
-  min-width: 500px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   main {
     margin: 8rem 3% 8rem 3%;
   }
@@ -104,7 +103,7 @@ main {
   letter-spacing: -0.1em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .header__title {
     font-size: 3rem;
   }
@@ -130,7 +129,7 @@ main {
   z-index: 1;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .menu-grille__bloc {
     margin: 0 20px 50px 20px;
   }
@@ -278,7 +277,7 @@ main {
   font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .btn__txt {
     font-size: 1.6rem;
   }
@@ -290,7 +289,7 @@ main {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .btn__txt .dot {
     width: 5px;
     height: 5px;
@@ -306,22 +305,17 @@ main {
   padding: 0.4rem 0;
   font-weight: 300;
   font-size: 1.1rem;
+  position: fixed;
   color: #facf49;
   background: #599d87;
   font-family: "Montserrat", sans-serif;
-}
-
-@media screen and (min-width: 700px) {
-  .footer {
-    position: fixed;
-  }
 }
 
 .footer__txt {
   text-align: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .footer__txt {
     display: flex;
     flex-flow: row nowrap;
@@ -354,19 +348,19 @@ main {
   max-width: 800px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .menu {
     margin: auto;
   }
 }
 
 .menu__bloc {
-  padding: 30px 10px;
+  padding: 30px 30px 150px 30px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .menu__bloc {
-    padding: 60px 80px;
+    padding: 150px 80px;
     box-shadow: 0 0 10px #a6a6a0;
   }
 }
@@ -393,7 +387,7 @@ main {
   margin-top: 50px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .menu__bloc .plats {
     flex-direction: row;
   }
@@ -417,7 +411,7 @@ main {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 480px) {
   .menu__bloc .plats-detail {
     display: flex;
     flex-direction: row;

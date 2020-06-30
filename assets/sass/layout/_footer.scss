@@ -8,9 +8,8 @@
   padding: 0.4rem 0;
   font-weight: 300;
   font-size: 1.1rem;
-  @include desktop-only{
-   position: fixed;
-  }
+  position: fixed;
+  
   @include headerStyle; //style commun au header, footer, CTA
 
   &__txt {
