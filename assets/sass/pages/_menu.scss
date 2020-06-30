@@ -2,6 +2,7 @@
   max-width: 800px;
   @include desktop-only {
       margin: auto;
+      margin-top: 150px;
     }
 
   &__bloc {
@@ -68,6 +69,7 @@
       color: $txt-color-menu1;
       font-family: $txt-menu1-menu;
       font-style: italic;
+      padding: 30px 30px 100px 30px;
       h3 {
         font-family: $txt-menu1-title;
         font-style: normal;

@@ -351,6 +351,7 @@ main {
 @media screen and (min-width: 480px) {
   .menu {
     margin: auto;
+    margin-top: 150px;
   }
 }
 
@@ -427,6 +428,7 @@ main {
   color: #3c1319;
   font-family: "Komika", cursive;
   font-style: italic;
+  padding: 30px 30px 100px 30px;
 }
 
 .menu__bloc--note h3 {
